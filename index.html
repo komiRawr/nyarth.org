@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>nyarth</title>
+		<meta property="og:title" content="nyarth.org">
+		<meta property="og:description" content="nyarth/meowth is a cat pokemon and he is cute">
+		<meta property="og:image" content="favicon.ico">
+		<style>
+			.element-class {
+				overflow: hidden;
+				scrollbar-width: none;
+			}
+			.element-class::-webkit-scrollbar {
+				display: none;
+			}
+			body {
+				overflow: hidden;
+				min-height: 100vh;
+				background-image: linear-gradient(to bottom, rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+				background-position: center;
+				background-size: cover;
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+				line-height: 1.6;
+			}
+			.balloon {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			img {
+				max-width: 30rem;
+				width: 100%;
+				height: auto;
+			}
+			h1 {
+				color: #ffe7bb;
+				font-weight: 900;
+				font-size: 1.2rem;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			}
+			h3 {
+				color: #ffe7bb;
+				font-weight: 900;
+				font-size: 0.9rem;
+				text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			}
+                        p {
+                                color: #ffe7bb;
+                                font-weight: 900;
+                                font-size: 0.8rem;
+                                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                        }
+                        a {
+                                color: #ffe683;
+				font-weight: 800;
+                                font-size: 0.7rem;
+				text-decoration: none;
+                                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+				transition-duration: 1.9s;
+                        }
+			.links::before {
+				content: "[*] ";
+			}
+			a:hover {
+				color: gold;
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<audio id="music" src="music.mp3" preload="auto"></audio>
+		<script>
+			function playMusic() {
+				var music = document.getElementById('music');
+				music.play();
+			}
+		</script>
+		<script>
+		        function setBackgroundImage() {
+		            const now = new Date();
+		            const hour = now.getHours();
+		            console.log('Current Hour (Local Time):', hour);
+		            if (hour >= 7 && hour < 11) {
+		                document.body.style.backgroundImage = "url('bg1.jpg')";
+		            } else if (hour >= 11 && hour < 16) {
+				document.body.style.backgroundImage = "url('bg3.jpg')";
+			    } else if (hour >= 16 && hour < 21) {
+				document.body.style.backgroundImage = "url('bg4.jpg')";
+		            } else {
+		                document.body.style.backgroundImage = "url('bg2.jpg')";
+		            }
+		        }
+		        setBackgroundImage();
+		        setInterval(setBackgroundImage, 60000);
+		</script>
+		<div class="balloon">
+			<a href="#" onclick="playMusic()">
+				<img src="balloon.webp" alt="team rocket in their meowth balloon !! ^_^">
+			</a>
+			<h1> nyarth.org </h1>
+			<h3>Nyarth is the japanese name for "meowth". My favourite pokemon.</h3>
+			<a class="links" href="https://t.me/thighpictures">telegram</a>
+		
+		</div>
+	</body>
+</html>
+		
